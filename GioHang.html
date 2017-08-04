@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+			<title>GioHang</title>
+		<link type="text/css" rel="stylesheet" href="Style/default.css" />
+      	</head>
+
+	<body class="frame">
+    <div class="subsidebar">
+         	<div class="bar_title">
+                <img src="images/cart.gif" align="middle" style="top:-5px;" />Giỏ hàng
+            </div>
+            <div class="subsideframe">
+                <p>Số lượng: <span id="soluong" style="font-weight: bold">0</span></p>
+                <p>Trị giá: <span id="trigia" style="font-weight: bold">0</span> VNĐ</p>            
+		    </div>	
+		</div>
+    </div>
+      <script type="text/javascript" src="Script/jquery224.js"></script>
+        <script src="Script/ThuVien2.js" type="text/javascript" charset="utf-8"></script>
+            
+        <!--nút mua hàng-->
+    <!--nút mua hàng-->
+   <script type="text/javascript">
+    $(function(){
+         if(typeof(Storage)!=="undefined")
+            {
+                  if (localStorage.slg)
+                  {              
+                    localStorage.removeItem('slg');
+                    localStorage.removeItem('tgia');
+                  }
+                localStorage.slg=0;
+                localStorage.tgia=0;
+            }
+        $('.gio').click(function(){
+            
+            localStorage.slg = Number(localStorage.slg)+1;
+            $('#soluong').text(localStorage.slg);
+            var sotien = $(this).next().text();
+            localStorage.tgia = Number(localStorage.tgia)+Number(sotien);
+            var tong = dinh_dang_so(localStorage.tgia, 0, true,true,"");        
+            $('#trigia').text(tong);
+        });    
+    });
+    </script>    
+
+</body>
+</html>

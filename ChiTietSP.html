@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		 <meta name="keywords" content="" />
+
+		<title>ChiTietSP</title>
+		<link type="text/css" rel="stylesheet" href="Style/default.css"/>
+		
+	          <script type="text/javascript" src="Script/jquery224.js"></script>
+    <!--    <script src="Script/ThuVien1.js" type="text/javascript" charset="utf-8"></script>-->
+        
+        <script src="Script/ThuVien2.js" type="text/javascript" ></script>
+            <!--connect--> 
+		<link rel="stylesheet" type="text/css" href="connected-carousels/jcarousel.connected-carousels.css">
+	    <script type="text/javascript" src="connected-carousels/jquery.js"></script>
+	    <script type="text/javascript" src="connected-carousels/jquery.jcarousel.min.js"></script>
+	    <script type="text/javascript" src="connected-carousels/jcarousel.connected-carousels.js"></script>  
+		<!-- j menu -->
+		<script src="jMenu/simpleMenu.js"></script>
+		<link rel="stylesheet" type="text/css" href="jMenu/style.css" />
+		<!--Fancybox -->
+    <script type="text/javascript" src="jquery.fancybox-1.3.4/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.js"></script>
+     <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.easing-1.3.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a#example1").fancybox();
+
+            $("a#example2").fancybox({
+                'overlayShow': false,
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic'
+            });
+
+            $("a#example3").fancybox({
+                'transitionIn': 'none',
+                'transitionOut': 'none'
+            });
+
+            $("a#example4").fancybox({
+                'opacity': true,
+                'overlayShow': false,
+                'transitionIn': 'elastic',
+                'transitionOut': 'none'
+            });
+
+            $("a#example5").fancybox();
+
+            $("a#example6").fancybox({
+                'titlePosition': 'outside',
+                'overlayColor': '#000',
+                'overlayOpacity': 0.9
+            });
+
+            $("a#example7").fancybox({
+                'titlePosition': 'inside'
+            });
+
+            $("a#example8").fancybox({
+                'titlePosition': 'over'
+            });
+        });
+    </script>
+	<!--  <script type="text/javascript">
+    $(function(){
+         if(typeof(Storage)!=="undefined")
+            {
+                  if (localStorage.slg)
+                  {              
+                    localStorage.removeItem('slg');
+                    localStorage.removeItem('tgia');
+                  }
+                localStorage.slg=0;
+                localStorage.tgia=0;
+            }
+        $('.gio').click(function(){
+            
+            localStorage.slg = Number(localStorage.slg)+1;
+            $('#soluong').text(localStorage.slg);
+            var sotien = $(this).next().text();
+            localStorage.tgia = Number(localStorage.tgia)+Number(sotien);
+            var tong = dinh_dang_so(localStorage.tgia, 0, true,true,"");        
+            $('#trigia').text(tong);
+        });    
+    });
+    </script>    
+ -->
+ <script type="text/javascript">
+    $(function(){
+         if(typeof(Storage)!=="undefined")
+            {
+                  if (localStorage.slg)
+                  {              
+                    localStorage.removeItem('slg');
+                    localStorage.removeItem('tgia');
+                  }
+                localStorage.slg=0;
+                localStorage.tgia=0;
+            }
+        $('.gio').click(function(){
+            
+            localStorage.slg = Number(localStorage.slg)+1;
+            $('#soluong').text(localStorage.slg);
+            var sotien = $(this).next().text();
+            localStorage.tgia = Number(localStorage.tgia)+Number(sotien);
+            var tong = dinh_dang_so(localStorage.tgia, 0, true,true,"");        
+            $('#trigia').text(tong);
+        });    
+    });
+    </script>    
+
+	</head>
+<body>
+		<!-- HEADER -->									
+	<header id="header">
+						<div id="logo" >
+					<h1 >
+						<span style="color: #000000;">Shop</span> 
+						<span style="color: #8C0209;"> Thiên Thanh</span> 
+					</h1> 
+					<p >THỜI TRANG NAM NỮ</p>
+			</div>
+	</header>
+		<!--MENU-->
+<section id="menuContainer">
+  <nav id="wrapper" >
+        <ul class="main_nav">
+            <li><a href="TrangChu.html">Trang chủ</a></li>
+            <li><a href="#">Quần áo nữ</a>
+                <ul class="sub_nav">
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Áo Sơ mi</a></li>
+                    <li><a href="#">Quần tây</a></li>
+                    <li><a href="#">Quần jean</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Quần áo nam</a>
+                <ul class="sub_nav">
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Áo Sơ mi</a></li>
+                    <li><a href="#">Quần tây</a></li>
+                    <li><a href="#">Quần jean</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Phụ kiện</a>
+                <ul class="sub_nav">
+                    <li><a href="#">Mắt kính</a></li>
+                    <li><a href="#">Dây nịt</a></li>
+                    <li><a href="#">Giỏ xách</a></li>
+                    <li><a href="#">Nón</a></li>
+                    <li><a href="#">Giày dép</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức sự kiện</a></li>
+            <li><a href="#">
+                <img src="images/Email.gif" align="absmiddle" style="height: 20px" /> 
+                Liên hệ</a>
+            </li>
+            <li id="timkiem">
+                <input type="text" id="txtTim" value="Tên sản phẩm" 
+                        onfocus="if(value=='Tên sản phẩm'){value=''}" 
+                        onblur="if(value=='') {value='Tên sản phẩm'}"  />
+                <input type="image" id="btnTim" title="Tìm sản phẩm" src="images/Search2.png" />
+            </li>                    
+        </ul>
+    </nav>
+    </section>
+		<!-- CONTENT PAGE-->
+	<section id="mainContainer">
+		
+<section id="maincontent">
+		<div class="khungsp">
+            <!-- jcarousels -->
+             <div class="connected-carousels">
+                <div class="stage">
+                    <div class="carousel carousel-stage">
+                        <ul>
+                            <li><img src="images/Spham_01.jpg" alt=""></li>
+                            <li><img src="images/Spham_02.jpg" alt=""></li>
+                            <li><img src="images/Spham_03.jpg" alt=""></li>
+                            <li><img src="images/Spham_04.jpg" alt=""></li>
+                            <li><img src="images/Spham_05.jpg" alt=""></li>
+                            <li><img src="images/Spham_06.jpg" alt=""></li>
+                            <li><img src="images/Spham_07.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <p class="photo-credits">
+                       <a href="http://alphatek.edu.vn" style="color: #000000" > Photos by Shop Thiên Thanh</a>
+                    </p>
+                    <a href="#" class="prev prev-stage"><span>&lsaquo;</span></a>
+                    <a href="#" class="next next-stage"><span>&rsaquo;</span></a>
+                </div>
+                <div class="navigation">
+                    <a href="#" class="prev prev-navigation">&lsaquo;</a>
+                    <a href="#" class="next next-navigation">&rsaquo;</a>
+                    <div class="carousel carousel-navigation">
+                        <ul>
+                            <li><img src="images/Spham_01.jpg" alt=""></li>
+                            <li><img src="images/Spham_02.jpg" alt=""></li>
+                            <li><img src="images/Spham_03.jpg" alt=""></li>
+                            <li><img src="images/Spham_04.jpg" alt=""></li>
+                            <li><img src="images/Spham_05.jpg" alt=""></li>
+                            <li><img src="images/Spham_06.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end jcarousels -->
+            <div class="thongtinsp">
+                <h3>Mã sản phẩm: D1181 </h3> 
+                <h3>Đầm tạo nhiều kiểu cực xinh </h3>
+                <p>- Kích cỡ: Free size, cho nữ từ 52kg trở xuống.</p>
+                <p>- Kích thước: </p>
+                <pre style="font-family: inherit">
+         + Ngực: 86 cm 
+         + Eo: 70 cm 
+         + Dài: 81cm </pre>
+                <p>- Màu sắc:  đen viền da. </p>
+                <p>- Chất liệu: kaki tuyết mưa mịn đẹp </p>
+                <h3>- Đơn giá: 1,200,000 VND</h3>
+                <p class="jRight" >Số lượng: <input type="text" size="10" value="2" />
+                    <input class="gio" type="image" src="images/cart2.png" title="Chọn mua hàng" /> </p>                  
+            </div>                
+		</div>
+		<div class="muctieude2">
+            <div class="tieude">&loz; Sản phẩm cùng loại &raquo;&raquo;</div>
+            <div class="dshinh">
+                <table style="border-width: 0px; border-collapse: collapse" cellpadding="2" cellspacing="0px">
+                    <tr>
+                        <td>
+                            <a id="example8" href="images/Dam01.jpg" title="Đầm đỏ mùa Giáng sinh">
+                                <img src="images/Dam01.jpg" class="hinh" /></a>
+                               <a href="ChiTietSP.html">Đầm đỏ mùa Giáng sinh</a><br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="300000"/> 
+                            <span id="dongia"> 300000</span> 
+                        </td>
+                        <td>
+                           <a id="example8" href="images/Dam02.jpg" title="Đầm Đuôi Cá Fashion">
+                                <img src="images/Dam02.jpg" alt="" class="hinh" /></a>
+                            <a href="ChiTietSP.html">Đầm Đuôi Cá Fashion</a> <br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="350000"/>
+                            <span id="dongia"> 350000</span>
+                         </td>
+                        <td>
+                           <a id="example8" href="images/Dam03.jpg" title="Đầm Xòe Phối Thắt Eo">
+                                <img src="images/Dam03.jpg" alt="" class="hinh" /></a>
+                            <a href="ChiTietSP.html">Đầm Xòe Phối Thắt Eo</a> <br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="450000"/>
+                            <span id="dongia"> 450000</span>
+                        </td>
+                        <td>
+                            <a id="example8" href="images/Dam04.jpg" title="Đầm Phối Màu 2 Túi">
+                                <img src="images/Dam04.jpg" alt="" class="hinh" /></a>
+                            <a href="ChiTietSP.html">Đầm Phối Màu 2 Túi</a> <br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="1300000"/>
+                            <span id="dongia"> 1300000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a id="example8" href="images/Dam05.jpg" title="Đầm Phối Ren Romance">
+                                <img src="images/Dam05.jpg" alt="" class="hinh" /></a>                           
+                            <a href="ChiTietSP.html">Đầm Phối Ren Romance</a> <br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="250000"/>
+                            <span id="dongia"> 250000</span>
+                        </td>
+                        <td>
+                            <a id="example8" href="images/Dam06.jpg" title="Đầm Caro Tay Lỡ">
+                                <img src="images/Dam06.jpg" alt="" class="hinh" /></a>                                                       
+                            <a href="ChiTietSP.html">Đầm Caro Tay Lỡ</a> <br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="300000"/>
+                            <span id="dongia"> 300000</span>
+                        </td>
+                        <td>
+                            <a id="example8" href="images/Dam07.jpg" title="Đầm Sơ Mi Họa Tiết Bi">
+                                <img src="images/Dam07.jpg" alt="" class="hinh" /></a>                                                                                  
+                            <a href="ChiTietSP.html">Đầm Sơ Mi Họa Tiết Bi</a><br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="700000"/> 
+                            <span id="dongia"> 700000</span>
+                        </td>
+                        <td>
+                            <a id="example8" href="images/Dam08.jpg" title="Đầm Sọc Vintage">
+                                <img src="images/Dam08.jpg" alt="" class="hinh" /></a>                                                                                                              
+                            <a href="ChiTietSP.html">Đầm Sọc Vintage</a><br />
+                            <input type="image" src="images/cart2.png" class="gio" title="Chọn mua hàng" value="500000"/> 
+                            <span id="dongia"> 500000</span>
+                        </td>
+                    </tr>
+                </table>
+                <div id="phantrang">
+                    First ... 1  2  3  4  5  6  7  8  9  10 ... Last 
+                </div>
+            </div>
+        </div>
+	</section>
+
+			<aside id="sidebar2" class="sidebar">
+					<div class="subsidebar">
+					<!--	<iframe src="GioHang.html" scrolling="no" height="120px" width="220px" frameborder="0"> </iframe>-->
+					<div class="bar_title">
+                <img src="images/cart.gif" align="middle" style="top:-5px;" />Giỏ hàng
+            </div>
+            <div class="subsideframe">
+                <p>Số lượng: <span id="soluong" style="font-weight: bold">0</span></p>
+                <p>Trị giá: <span id="trigia" style="font-weight: bold">0</span> VNĐ</p>            
+		    </div>	
+					
+					
+						</div>
+				
+						<div class="subsidebar">
+							<iframe src="TinThoiTrang.html" scrolling="no" height="1300px" width="220px" frameborder="0"> </iframe>
+						</div>
+						
+				</aside>					
+						
+			<div style="clear: both;">&nbsp;</div>
+	</section>
+	<!--end page -->
+	
+	
+	<!--Footer-->
+	  <!--Footer-->
+        <footer id="footer" >
+                                 <p class="copyright" >
+                                        &copy; &nbsp; &nbsp; 2014 All Rights Reserved &nbsp;&bull;&nbsp; Design by <a href="http://alphatek.edu.vn "
+                                       >Alphatek Company</a>
+                               
+                                </p>
+                       
+                                 <p class="link">
+                                        <a href="https://www.facebook.com/hoiyeuthichlaptrinh"><img src="images/facebook.png" style="border:none"/></a>      
+                                        <a href="https://www.youtube.com "><img src="images/youTube.png" /></a>  
+                         </p>  
+        </footer>
+ 
+    </body>
+</html>
